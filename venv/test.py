@@ -5,7 +5,7 @@ from tensorflow.keras.preprocessing import image
 import pathlib
 
 # Cargar el modelo entrenado
-model = tf.keras.models.load_model("fruit_veggie_classifier-V2.h5")
+model = tf.keras.models.load_model("fruit_veggie_classifier_V3.h5")
 
 # Lista de clases (ajústala según el orden en que se entrenó el modelo)
 class_labels = [
@@ -42,7 +42,7 @@ def predict_image(img_path):
     return fruit_name, condition
 
 # Prueba con una imagen de ejemplo
-img_path = "X:/Fruit And Vegetable Diseases Dataset/new/platano.jpg"  # Ruta de prueba
+img_path = "X:/new/download.jpg"  # Ruta de prueba
 fruit, condition = predict_image(img_path)
 print(f"Fruta detectada: {fruit}")
 print(f"Estado: {condition}")
